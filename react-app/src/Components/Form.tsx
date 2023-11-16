@@ -1,5 +1,5 @@
 import { FieldValues, useForm } from "react-hook-form";
-import { z } from "zod";
+import { isValid, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
 
 const schema = z.object({
@@ -48,7 +48,7 @@ const Form = () => {
         />
         {errors.age && <p className="text-danger">{errors.age.message}</p>}
       </div>
-      <button className="btn btn-primary" type="submit">
+      <button disabled={!isValid} className="btn btn-primary" type="submit">
         Submit
       </button>
     </form>
