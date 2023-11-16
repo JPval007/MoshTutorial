@@ -1,0 +1,11 @@
+:root {
+    --box-size: 30px;
+}
+
+.Like {
+    background-color: lightblue;
+}
+
+.subscribe {
+    background-color: crimson;
+}
